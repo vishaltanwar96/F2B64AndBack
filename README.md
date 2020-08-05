@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ## Usage
 File to Base64 String.
  ```bash
-python f2b64_and_back.py 0 path_to_file > base64.ext 
+python f2b64_and_back.py 0 path_to_file > base64.txt 
 ```
 
 Base64 String(Stored in a file) to File.
