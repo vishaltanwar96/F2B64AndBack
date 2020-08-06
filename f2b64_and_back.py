@@ -16,7 +16,7 @@ class F2B64AndBack(object):
     """
 
     @classmethod
-    def from_file2b64(cls, file_path: str) -> None:
+    def from_file2b64(cls, file_path: str) -> str:
         """Convert File to Base64 String"""
 
         try:
@@ -29,10 +29,10 @@ class F2B64AndBack(object):
             tc, te, tb = sys.exc_info()
             print(f'CLASS: {tc}, ERROR: {exc}, LINE_NO: {tb.tb_lineno}')
             b64_data = ''
-        sys.stdout.write(f'{b64_data}\n')
+        return f'{b64_data}\n'
 
     @classmethod
-    def from_b642file(cls, file_path_bytes: str, file_name: str) -> None:
+    def from_b642file(cls, file_path_bytes: str, file_name: str) -> str:
         """Convert Base64 String to File"""
 
         try:
@@ -51,7 +51,7 @@ class F2B64AndBack(object):
             tc, te, tb = sys.exc_info()
             print(f'CLASS: {tc}, ERROR: {exc}, LINE_NO: {tb.tb_lineno}')
             output_file_path = ''
-        sys.stdout.write(f'{output_file_path}\n')
+        return f'{output_file_path}\n'
 
 
 if __name__ == '__main__':
@@ -64,6 +64,8 @@ if __name__ == '__main__':
     if not os.path.exists(args.filepath):
         sys.exit(FILE_NOT_FOUND)
     if args.flag == 0:
-        F2B64AndBack.from_file2b64(args.filepath)
+        data = F2B64AndBack.from_file2b64(file_path=args.filepath)
+        sys.stdout.write(data)
     if args.flag == 1:
-        F2B64AndBack.from_b642file(file_name=args.output, file_path_bytes=args.filepath)
+        data = F2B64AndBack.from_b642file(file_name=args.output, file_path_bytes=args.filepath)
+        sys.stdout.write(data)
