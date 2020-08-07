@@ -16,7 +16,7 @@ python f2b64_and_back.py 0 path_to_file > base64.txt
 
 Base64 String(Stored in a file) to File.
 ```bash
-python f2b64_and_back.py 1 path_to_base64_string_file.txt -o CustomFileName
+python f2b64_and_back.py 1 path_to_base64_string_file.txt -of CustomFileName
 ```
 
 ## Help
