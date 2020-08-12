@@ -1,4 +1,5 @@
 # F2B64AndBack
+Covert your Files to Base64 Strings and Vice-Versa
 
 ## Inspired From
 [This Gist](https://gist.github.com/amoghmadan/17eeb81824b00f4010ba1ef07fe22740) 
